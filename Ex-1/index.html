@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            background-color: lightgreen;
+        }
+        h2 {
+            text-decoration: underline;
+        }
+        .special {
+            color: blue;
+        }
+        #hello {
+            font-weight: bold;
+        }
+        img {
+            display: block;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="special">Text1</h1>
+    <h2 class="special">Text2</h2>
+    <p id="hello">Text3</p>
+    <a href="">Text4</a>
+    <img src="https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg" alt="">
+    <script>
+    //Bai Tap Tinh Tong
+        let n = 3;
+        let s = 0;
+        let tinhtong = function(n) {
+        for (let i = 0; i <= n; i++) {
+        s = s + i; //s+=i
+        }
+        console.log(s);
+        }
+        tinhtong(6)
+    //Bai Tap Tinh Luy Thua
+    let a = 3;
+    let b = 4;
+    let t = a**b;
+        console.log(t)    
+</script>
+</body>
+</html>
