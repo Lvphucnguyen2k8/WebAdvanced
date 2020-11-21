@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        height: 250px;
+        width: 250px;
+    }
+</style>
+</head>
+<body>
+    <h1 id="hello">Hello e-vơ-ri-bò-đi</h1>
+    <h1 id="bye">Hello e-vờ-ri-quờ-ang</h1>
+    <button onclick = "change()">Click</button>
+    <button onclick = "document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Turn off</button>
+    <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="myImage">
+    <button onclick = "document.getElementById('myImage').src='https://webvn.com/wp-content/uploads/2015/08/pic_bulbon.gif'">Turn on</button>
+    <div id="box"></div>
+    <button onclick = "red()">Red</button>
+    <button onclick = "green()">Green</button>
+    <button onclick = "yellow()">Yellow</button>
+    <button onclick = "blue()">Blue</button>
+    <script>
+        document.getElementById("hello").style.color = "red";
+        console.dir(hello)
+        document.getElementById("hello").innerHTML = "GoodBye";
+        let d = document.getElementById("hello");
+        d.innerHTML = "Hello Everybody";
+    function change() {
+        document.getElementById("bye").style.fontStyle = "italic";
+        document.getElementById("bye").style.textDecoration = "underline";
+        document.getElementById("bye").style.backgroundColor = "lightgreen";
+    }
+    function red() {
+        document.getElementById("box").style.backgroundColor = "red"
+    }
+    function green() {
+        document.getElementById("box").style.backgroundColor = "green"
+    }
+    function yellow() {
+        document.getElementById("box").style.backgroundColor = "yellow"
+    }
+    function blue() {
+        document.getElementById("box").style.backgroundColor = "blue"
+    }
+    </script>
+</body>
+</html>
