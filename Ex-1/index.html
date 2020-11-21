@@ -28,6 +28,7 @@
     <h2 class="special">Text2</h2>
     <p id="hello">Text3</p>
     <a href="">Text4</a>
+    <button onclick="myFunction()">Calculate Lũy Thừa 4</button>
     <img src="https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg" alt="">
     <script>
     //Bai Tap Tinh Tong
@@ -46,10 +47,13 @@
     let t = a**b;
         console.log(t)    
     //Bai Tap Tinh Luy Thua 4
-    let a;
-    let b = 4;
-    let t = a**b;
-        console.log(t)
+    function myFunction() {
+    let x = prompt("Please enter a random number", "x");
+    let z = x**4;
+    if (x != Number) {
+    document.getElementById("hello").innerHTML = z;
+    }
+}
 </script>
 </body>
 </html>
