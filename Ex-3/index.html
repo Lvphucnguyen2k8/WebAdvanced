@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1 id="1">Text 1</h1>
+    <h1 id="2">Text 2</h1>
+    <ul id="list"></ul>
+    <button onclick="PrintToDoList()">Print To Do List</button>
+    <script>
+        let viecCanLam = ["Chơi Game","Lau Nhà","Quét Nhà","Rửa Chén","Làm BTVN"];
+        let color = ["red","green,","blue","yellow",""]
+        let PrintToDoList = function() {
+            for (let i = 0; i < viecCanLam.length; i++ ) {
+                let list = document.getElementById("list");
+                let ToDoList = document.createElement("li");
+                ToDoList.innerHTML = viecCanLam[i];
+                ToDoList.style.color = color[i];
+                list.appendChild(ToDoList);
+            }
+        }
+    </script>
+</body>
+</html>
