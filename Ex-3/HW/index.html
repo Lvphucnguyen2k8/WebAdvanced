@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h2 id="h1">Hello</h2>
+<h2 id="h2">Hello</h2>
+<body>
+    <script>
+        let A = [1,2,3,12,34,53,99,63,24,23,78,84,7,45,89];
+        let max = Math.max.apply(Math, A);
+        console.log(max);
+        A.sort(function(a, b) {
+        return a - b;
+         });
+        console.log(A);
+        let last =  function(array, n) {
+        if (array == null) 
+        return void 0;
+        if (n == null) 
+        return array[array.length - 1];
+        return array.slice(Math.max(array.length - n, 0));  
+        };
+        console.log(last([7, 9, 0, -2]));
+        console.log(last([7, 9, 0, -2],3));
+        console.log(last([7, 9, 0, -2],6));
+        myColor = ["Red", "Green", "White", "Black"];
+        console.log(myColor.toString());
+        console.log(myColor.join());
+        console.log(myColor.join('+'));  
+        let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+        function Ordinal(n)
+{
+        let o = ["th","st","nd","rd"],
+        x = n%100;
+        return x+(o[(x-20)%10]||o[x]||o[0]);
+}
+        for(n = 0; n < color.length; n++){
+        let ordinal = n + 1;
+        let output = (Ordinal(ordinal) + " choice is " + color[n] + ".");
+        console.log(output);
+}   
+function Arrays_sum(array1, array2) 
+{
+  let result = [];
+  let ctr = 0;
+  let x=0;
+
+  if (array1.length === 0) 
+   return "array1 is empty";
+  if (array2.length === 0) 
+   return "array2 is empty";   
+
+ while (ctr < array1.length && ctr < array2.length) 
+  {
+    result.push(array1[ctr] + array2[ctr]);
+    ctr++;
+  }
+
+ if (ctr === array1.length) 
+ {
+    for (x = ctr; x < array2.length; x++)   {
+      result.push(array2[x]);
+    }
+  } 
+  else
+  {
+  for (x = ctr; x < array1.length; x++) 
+    {
+      result.push(array1[x]);
+    }
+  }
+  return result;
+}
+
+console.log(Arrays_sum([1,0,2,3,4], [3,5,6,7,8,13]));  
+    </script>
+</body>
+</html>
