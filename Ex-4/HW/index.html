@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        td {
+            text-align: center;
+        }
+        input {
+            height: 100%;
+            width: 95%;
+        }
+        button {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+<body>
+    <h1>Basic Calculator</h1>
+    <table border="1" style="height: 300px; width: 350px;">
+        <tr>
+            <td colspan="3"><input type="text" id="result"></td>
+            <td><button onclick="xoa()">Clear</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="setOperator('^\/-')"></button></td>
+            <td><button onclick="setOperator('^')"></button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display(7)">7</button></td>
+            <td><button onclick="display(8)">8</button></td>
+            <td><button onclick="display(9)">9</button></td>
+            <td><button onclick="setOperator('*')">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display(5)">4</button></td>
+            <td><button onclick="display(5)">5</button></td>
+            <td><button onclick="display(6)">6</button></td>
+            <td><button onclick="setOperator('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display(1)">1</button></td>
+            <td><button onclick="display(2)">2</button></td>
+            <td><button onclick="display(3)">3</button></td>
+            <td><button onclick="setOperator('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="display(0)">0</button></td>
+            <td><button onclick="display('.')">.</button></td>
+            <td><button onclick="tinhtoan()">=</button></td>
+            <td><button onclick="setOperator('-')">-</button></td>
+        </tr>
+    </table>
+    <script>
+        let sotuoi = prompt("Please enter your age!")
+        if ( sotuoi >= 6 & sotuoi < 10) {
+            console.log("Học cấp 1");
+        }
+        else if ( sotuoi >= 10 & sotuoi < 16) {
+            console.log("Học cấp 2");
+        }
+        else if ( sotuoi >= 16 & sotuoi < 18) {
+            console.log("Học cấp 3");
+        }
+        else if ( sotuoi >= 18 & sotuoi < 22) {
+            console.log("Học đại học");
+        }
+        else {
+            console.log("Đi làm");
+        }
+        let sodautien;
+        let toantu;
+        let sothuhai;
+        let display = function(n){
+            let result = document.getElementById("result");
+            if( result.value == "+" || result.value == "-" || result.value == "*" || result.value == "/" || result.value == "^\/-" || result.value == "^")
+            result.value = "";
+
+            result.value += n;
+        }
+        let setOperator = function(n)
+        {
+            let result = document.getElementById("result")
+            sodautien = result.value;
+            result.value = n;
+            toantu = n;
+        }
+        let tinhtoan = function() 
+        {
+            let result = document.getElementById("result");
+            let sothuhai = result.value;
+            let ketqua = 0;
+            sodautien = parseFloat(sodautien);
+            sothuhai = parseFloat(sothuhai);
+            if ( toantu == "+") {
+                ketqua = sodautien + sothuhai;
+            }
+            if ( toantu == "-") {
+                ketqua = sodautien - sothuhai;
+            }
+            if ( toantu == "*"){
+                ketqua = sodautien * sothuhai;
+            }
+            if ( toantu == "/") {
+                ketqua = sodautien / sothuhai;
+            }
+            if ( toantu == "^\/-") {
+                ketqua = Math.sqrt(sodautien)
+            }
+            if ( toantu == "^") {
+                ketqua = sodautien ** sothuhai;
+            }
+            result.value = ketqua;
+        }
+        let xoa = function()
+        {
+            document.getElementById("result").value = "";
+        }
+    </script>
+    <!-- <script>
+        số đầu tiên + toán tử (*, /, +, -) + số thứ hai = kết quả
+        let sodautien
+        let toantu
+        let sothuhai
+        khi nhập một số thì sẽ hiện số đó đằng sau số đã nhập
+        lưu số hiện tại vào biến số thứ nhất
+        kiểm tra nút nhấn có phải toán tử hay không thì sẽ xóa số đang hiện và hiện dấu toán tử
+        lưu toán tử đang hiện vào biến toán tử
+        lưu thông tin của số đang hiện vào biến số thứ hai
+        tạo một biến kết quả bằng 0 để lưu kết quả
+        kiểm tra toán tử
+        nếu toantu == "+" ta thực hiện phép cộng
+        tương tự các dấu còn lại
+        cho hiện phần nội dung của biến kết quả
+    </script> -->
+</body>
+</html>
