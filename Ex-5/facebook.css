@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F0F2F5;
+}
+
+.main-wrapper{
+    height: 100vh;
+}
+
+.facebook-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.facebook-login__content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.facebook--text img{
+    width: 300px;
+}
+
+.facebook--text p{
+    font-size: 28px;
+    max-width: 500px;
+}
+
+.facebook--form form{
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    padding: 30px;
+    border-radius: 5px;
+    min-width: 400px;
+}
+
+.facebook--form form *{
+    display: block;
+    margin: 15px 0;
+}
+
+.facebook--form input{
+    display: block;
+    margin: 15px 0;
+    border: none;
+    font-size: 16px;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+.facebook--form button{
+    width: 100%;
+    padding: 8px 0;
+}
