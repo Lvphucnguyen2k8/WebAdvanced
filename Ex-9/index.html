@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="favoriteFilm">Phim Iu Thik</p> -->
+    <h2 onclick="myFunction()">Chiếc Nón Kì Diệu</h2>
+    <script>
+        // let phimyeuthich = [
+        //     { name: "Jurassic World: Fallen Kingdom", director: "J.A. Bayona", characters: "Chris Patt", year: "2018"},
+        //     { name: "Wonder Woman 1984", director: "Patty Jenkins", characters: "Gal Gadot, Kriten Wiig", year: "2020"},
+        //     { name: "Attack On Titan", director: "Isayama Hajime", characters: "Eren Jeager, Mikasa H'Ackerman, Armin Alert"},
+        // ]
+        // console.log(
+        //     phimyeuthich[0].characters,
+        //     phimyeuthich[1].year,
+        //     phimyeuthich[2].name
+        //     );
+        // document.getElementById("favoriteFilm").innerHTML = phimyeuthich[0].characters + phimyeuthich[1].year + phimyeuthich[2].name;
+function myFunction() {
+        let words = ["crocodile", "webadvanced", "luuvophucnguyen"];
+        let randomword = words[Math.floor(Math.random()*words.length)];
+        let answerword = [];
+        let guess = "";
+        prompt("Let's playing Hangman");
+        prompt("Ok to play, Cancel to out");
+
+        for ( let i = 0; i < randomword.length; i++) {
+            answerword[i] = "_";
+        }
+        let remainingwords = randomword.length;
+        while ( remainingwords > 0) {
+            if (guess == null) {
+                break;
+            }
+            else if (guess.length != 1) {
+                alert("Please Enter A Word");
+            }
+            else {
+                if (guess == randomword[i]) {
+                    answerword[i] = join;
+                    remainingwords--;
+                }
+            }
+            array.answerword.join("");
+        }
+    }      
+    </script>
+</body> 
+</html>
