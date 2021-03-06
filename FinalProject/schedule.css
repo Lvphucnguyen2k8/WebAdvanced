@@ -71,5 +71,13 @@ h4 #clock {
     font-weight: bold;
     font-size: 20px;
 }
+#add {
+    border-radius: 50%;
+    font-size: 70px;
+    color: red;
+    background-color: lightcoral;
+    width: 80px;
+    height: 80px;
+}
 blockquote:before { content: '"';}
 blockquote:after { content: '"';}
