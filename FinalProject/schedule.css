@@ -10,20 +10,6 @@ div.wakeUpTime, div.lunchTime, div.sleepTime {
     text-transform: uppercase;
     font-weight: bold;
 }
-#sportTimeButton {
-    background-color: #222222;
-    text-transform: uppercase;
-    width: 250px;
-    height: 70px;
-    font-family: 'Brush Script MT', cursive;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 0;
-    margin-top: 20px;
-}
 #eventImage {
     width: 600px;
     height: 600px;
