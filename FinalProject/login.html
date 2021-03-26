@@ -11,7 +11,7 @@
         <div id="leftSidebar">
 
         </div>
-        <div id="rightSidebar">
+        <div class="rightSidebar">
             <h1>Login</h1>
             <label for="usn">Username</label>
             <input id="name" type="name" placeholder="Name" name="usn" required>
@@ -66,15 +66,15 @@
     }
 }
 
-// function setName() {
+function setName() {
 
-    // if (localStorage.getItem("recentUser") !=null) {
-    //     let user = JSON.parse(localStorage.getItem("recentUser"));
-    //     let username = JSON.parse(localStorage.getItem("listUserName"));
-    //     document.getElementById("message").innerHTML = "Hello" + username[Number(user)] + "!";
-    // }
+    if (localStorage.getItem("recentUser") !=null) {
+        let user = JSON.parse(localStorage.getItem("recentUser"));
+        let username = JSON.parse(localStorage.getItem("listUserName"));
+        document.getElementById("message").innerHTML = username[Number(user)] + "Schedule";
+    }
     
-// }
+}
     </script>
     </div>
 </body>

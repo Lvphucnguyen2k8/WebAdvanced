@@ -107,11 +107,11 @@ function closeForm() {
 }
 
 function confirm() {
-//  localStorage.clear();
-  let confirm_time = document.getElementById("appt").value;
-  let confirm_content = document.getElementById("content").value;
-  localStorage.setItem("confirm_time_ls", "confirm_time");
-  localStorage.setItem("confirm_content_ls", "confirm_content");
+ localStorage.clear();
+  let confirm_timeJS = document.getElementById("appt").value;
+  let confirm_contentJS = document.getElementById("content").value;
+  localStorage.setItem("confirm_time_ls", "confirm_timeJS");
+  localStorage.setItem("confirm_content_ls", "confirm_contentJS");
 
 }
 function localStorage1() {
@@ -119,6 +119,6 @@ function localStorage1() {
   localStorage.getItem("confirm_time_ls");
   localStorage.getItem("confirm_content_ls");
   let addEvent = document.createElement("h2");
-  addEvent.innerText = confirm_time + confirm_content;
+  addEvent.innerText = "confirm_timeJS" + "confirm_contentJS";
   eventAddedJS.appendChild("addEvent");
 }
