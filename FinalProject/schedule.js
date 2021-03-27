@@ -41,7 +41,7 @@ let showCurrentTime = function()
  
     clock.innerText = clockTime;
 };
-
+showCurrentTime();
 let updateClock = function() 
 {
   //   let time = new Date().getHours();
@@ -84,10 +84,9 @@ let updateClock = function()
   
   // showCurrentTime();
 };
-updateClock();
 
 let oneSecond = 1000;
-setInterval( updateClock, oneSecond);
+setInterval(updateClock, oneSecond);
 
 function logout() {
 
@@ -106,19 +105,26 @@ function closeForm() {
   document.getElementById("form").style.display = "none";
 }
 
-function confirm() {
- localStorage.clear();
-  let confirm_timeJS = document.getElementById("appt").value;
-  let confirm_contentJS = document.getElementById("content").value;
-  localStorage.setItem("confirm_time_ls", "confirm_timeJS");
-  localStorage.setItem("confirm_content_ls", "confirm_contentJS");
+let confirm_array = [];
+
+function confirm() { 
+   localStorage.clear;
+    let confirm_timeJS = document.getElementById("appt").value;
+    let confirm_contentJS = document.getElementById("content").value;
+    // alert(typeof(confirm_contentJS));
+    // alert(typeof(confirm_timeJS));
+    let obj = JSON.parse('{"time": "'+ confirm_timeJS +'" , "content": "'+ confirm_contentJS +'" }')
+    confirm_array.push(obj);
+    localStorage.setItem("confirm_arrayls", JSON.stringify(confirm_array));
 
 }
 function localStorage1() {
   let eventAddedJS = document.getElementById("eventAdded");
-  localStorage.getItem("confirm_time_ls");
-  localStorage.getItem("confirm_content_ls");
+  let confirm_timels = JSON.parse(localStorage.getItem("confirm_arrayls"));
+  console.log(confirm_timels);
+  // let confirm_contentls = localStorage.getItem(confirm_contentJS);
   let addEvent = document.createElement("h2");
-  addEvent.innerText = "confirm_timeJS" + "confirm_contentJS";
-  eventAddedJS.appendChild("addEvent");
+  // console.log(confirm_contentls);
+  addEvent.innerText = confirm_timels;
+  eventAddedJS.appendChild(addEvent);
 }
